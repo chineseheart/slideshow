@@ -16,8 +16,19 @@ for (let i = 0; i < allButtons.length; i++) {
 var n = 0
 var size = allButtons.length
 allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
-setInterval(() => {
+
+var timeId = setInterval(() => {
     n += 1
     allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
-}, 3000
+}, 1000
 )
+$('.window').on('mouseenter', function () {
+    window.clearInterval(timeId)
+})
+$('.window').on('mouseleave', function () {
+    timeId = setInterval(() => {
+        n += 1
+        allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
+    }, 1000
+    )
+})
