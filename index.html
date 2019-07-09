@@ -1,45 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>JS Bin</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <style>
-        .window {
-            border: 1px solid blue;
-            width: 225px;
-            overflow: hidden
-        }
 
-        .images {
-            display: flex;
-            align-items: flex-start;
-            border: 1px solid red;
-            transition: 0.8s all
-        }
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-        img {
-            width: 225px;
-        }
-    </style>
 </head>
 
-<div class="window">
-    <div class="images">
-        <img src="./png1.jpg" width:225px alt="图片1">
-        <img src="./png2.jpg" width:225px alt="图片12">
-        <img src="./png3.jpg" width:225px alt="图片3">
+<body>
+    <div class="window">
+        <div class="images">
+            <img src="./png1.jpg" alt="图片1" width="225px">
+            <img src="./png2.jpg" alt="图片2" width="225px">
+            <img src="./png3.jpg" alt="图片3" width="225px">
+        </div>
     </div>
-</div>
-<span id='buttons'>
-    <span>第1张</span>
-    <span>第2张</span>
-    <span>第3张</span></span>
-
-<script src="./js/main.js"></script>
-
+    <span class="buttons">
+        <span>图片1</span>
+        <span>图片2</span>
+        <span>图片3</span>
+    </span>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

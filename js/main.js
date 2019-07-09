@@ -1,12 +1,7 @@
-var allButtons = $('#buttons > span')
-console.log(allButtons)
+var allButtons = $('.buttons>span')
 for (let i = 0; i < allButtons.length; i++) {
-    console.log(allButtons[i])
     $(allButtons[i]).on('click', function (x) {
-
-        var index = $(x.currentTarget).index()
-        console.log(x.currentTarget)
-        var n = index * -225
+        var n = $(x.currentTarget).index() * -225
         console.log(n)
         $('.images').css({
             transform: 'translateX(' + n + 'px)'
@@ -14,21 +9,17 @@ for (let i = 0; i < allButtons.length; i++) {
     })
 }
 var n = 0
-var size = allButtons.length
-allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
-
 var timeId = setInterval(() => {
+    allButtons.eq(n % 3).trigger('click').addClass('red').siblings('.red').removeClass('red')
     n += 1
-    allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
-}, 1000
-)
+
+}, 1000)
 $('.window').on('mouseenter', function () {
-    window.clearInterval(timeId)
+    window.clearInterval(timeId).addClass('red').siblings('.red').removeClass('red')
 })
 $('.window').on('mouseleave', function () {
     timeId = setInterval(() => {
         n += 1
-        allButtons.eq(n % size).trigger('click').addClass('red').siblings('.red').removeClass('red')
-    }, 1000
-    )
+        allButtons.eq(n % 3).trigger('click').addClass('red').siblings('.red').removeClass('red')
+    }, 1000)
 })

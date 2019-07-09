@@ -1,3 +1,3 @@
-.red{
-    color: red
-}
+.window{overflow: hidden;width:225px;border:1px green solid;}
+.images{display: flex;align-items: flex-start;border:1px red solid;}
+.red{color:red}
