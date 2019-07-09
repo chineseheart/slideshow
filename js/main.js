@@ -1,6 +1,7 @@
 var allButtons = $('.buttons>span')
 for (let i = 0; i < allButtons.length; i++) {
     $(allButtons[i]).on('click', function (x) {
+        $(allButtons[i]).addClass('red').siblings('.red').removeClass('red')
         var n = $(x.currentTarget).index() * -225
         console.log(n)
         $('.images').css({
